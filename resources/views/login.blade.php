@@ -1,9 +1,9 @@
 @extends('home')
 @section('content')
 
-<div class="container mycss pt-5 ml-5">
+<div class="container pt-5 ml-5 mycss">
     <div class="row">
-        <div class="col-sm-4 " style="margin: auto">
+        <div class="col-sm-4 " style="margin: auto;">
             
             <form action="login" method="POST">
                 @csrf
@@ -16,7 +16,7 @@
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Login</button>
             </form>
         
         </div>

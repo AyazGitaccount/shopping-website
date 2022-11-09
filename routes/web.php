@@ -16,12 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/home-loginpage', function () {
     return view('login');
+});
+Route::get('/logout', function () {
+    session()->forget('user');
+    return redirect('/');
 });
 
 Route::post('/login',[LoginController::class,'myfunction']);
 Route::get('/',[ProductController::class,'index']);
 Route::get('detail/{id}',[ProductController::class,'productdetailFunc']);
+Route::get('search',[ProductController::class,'search']);
+Route::post('add_to_cart',[ProductController::class,'addTocart']);
+
+
 
 

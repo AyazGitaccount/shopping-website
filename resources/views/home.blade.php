@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
-<body style="background-color: sky blue;">
+<body>
     
       {{View::make('header')}}
       @yield('content')
@@ -21,7 +21,7 @@
 </body>
 <style>
     .mycss{
-        height: 100%;
+        height: 100vh;
     }
 
   #trending-img {
@@ -31,7 +31,7 @@
   
   }
   /* .trending-item{
-    float: left;
+    float:initial
    
   } */
   .trending-section{
@@ -42,6 +42,10 @@
   .pDetail-img{
     height: 220px;
     padding-top: 5%;
+  }
+  .search-img{
+    height:100px;
+    width: 10%;
   }
 
 </style>
