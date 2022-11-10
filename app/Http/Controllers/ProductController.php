@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ProductModel;
 use App\Models\Cart;
+use Illuminate\Support\Facades\DB;
 use Session;
 
 class ProductController extends Controller
@@ -48,5 +49,15 @@ class ProductController extends Controller
 
         $user_id = session()->get('user')['id'];
         return Cart::where('user_id',$user_id)->count();
+    }
+    static function cart_list()
+    {
+        $user_id = session()->get('user')['id'];
+        $data =  DB::table('cart')
+        ->join('_product','cart._product_id','_product.id')
+        ->select('_product.*')
+        ->where('cart.user_id',$user_id)
+        ->get();
+        return view('cart_items',['_product'=>$data]);
     }
 }
