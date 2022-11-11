@@ -26,7 +26,7 @@
 
   #trending-img {
     
-    height: 120px;
+    height: 190px;
     width: 33%;
   
   }

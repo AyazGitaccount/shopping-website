@@ -13,7 +13,7 @@
       @foreach($products as $item)
       <div class="carousel-item {{$item['id']==2?'active':''}} ">
         <a href="detail/{{$item['id']}}">
-          <img style="height: 400px;width:70%" src="{{$item['gallary']}}" class="img-fluid" alt="...">
+          <img style="height: 400px;width:60%" src="{{$item['gallary']}}" class="img-fluid" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>{{$item['name']}}</h5>
             <p>{{$item['description']}}</p>
