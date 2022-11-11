@@ -9,10 +9,10 @@
         @foreach($_product as $item)
         <div style="border-bottom: 3px solid grey;margin: 15px;">
             <a href="detail/{{$item->id}}">
-                <img style="width:20%; height:20% " class="img-thumbnail" src="{{$item->gallary}}" alt="...">
+                <img style="width:20%; height:20% " class="img-thumbnail" src="{{$item->gallary}}" alt="image">
                 <h5>{{$item->name}}</h5>
             </a>
-            <button type="button" class="btn btn-warning">Remove from Crat</button>
+            <a href="removeitem/{{$item->cart_id}}" type="button" class="btn btn-warning">Remove from Crat</a>
         </div>
 
     </div>
