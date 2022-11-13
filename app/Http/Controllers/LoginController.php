@@ -22,4 +22,13 @@ class LoginController extends Controller
              return redirect('/');
         }
     }
+     function signup_function(Request $url)
+    {
+         $user = new User;
+         $user->name=$url->name;
+         $user->email=$url->email;
+         $user->password=Hash::make($url->password);
+         $user->save();
+         return redirect('/home-loginpage');
+    }
 }

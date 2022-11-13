@@ -21,7 +21,7 @@ if (session()->has('user')) {
         <li class="nav-item">
           <a class="nav-link active" href="orders">Orders</a>
         </li>
-       
+
         <li class="nav-item">
           <a class="nav-link active" href="/cart_list">Cart({{$total}})</a>
         </li>
@@ -31,10 +31,13 @@ if (session()->has('user')) {
         <button class="btn btn-outline-success mx-2" type="submit">Search</button>
         @if(session()->has('user'))
         {
-          <a class="btn btn-outline-success" href="/logout" role="button">Logout</a> 
+        <a class="btn btn-outline-success" href="/logout" role="button">Logout</a>
         }
         @else{
-          <a class="btn btn-outline-success" href="/home-loginpage" role="button">Login</a>         }
+        <a class="btn btn-outline-success" href="/home-loginpage" role="button">Login</a>
+        <a class="btn btn-outline-success mx-2" href="/signup" role="button">signup</a> }
+
+        }
         @endif
       </form>
 

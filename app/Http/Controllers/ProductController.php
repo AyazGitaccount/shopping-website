@@ -7,7 +7,7 @@ use App\Models\ProductModel;
 use App\Models\Cart;
 use Illuminate\Support\Facades\DB;
 use App\Models\order;
-use Session;
+
 class ProductController extends Controller
 {
     //
@@ -100,4 +100,5 @@ class ProductController extends Controller
             ->get();
         return view('orders', ['orders' => $detail]);
     }
+    
 }
